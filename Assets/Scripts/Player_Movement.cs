@@ -16,6 +16,9 @@ public class Player_Movement : MonoBehaviour
     public float JumpTime;
     private bool isJumping;
 
+    public float hangTime = 0.2f;
+    private float hangCounter;
+
     private Rigidbody2D _rigidbody;
 
     void Start()
@@ -32,15 +35,18 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
+        //Check ground system
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if(isGrounded == true && Input.GetButtonDown("Jump")) 
+        //Tap jump for normal jump
+        if(Input.GetButtonDown("Jump") && hangCounter > 0f) 
         {
             isJumping = true;
             JumpTimeCounter = JumpTime;
             _rigidbody.velocity = Vector2.up * Jumpforce;
         }
 
+        //Hold jump for higher jump
         if (Input.GetButton("Jump") && isJumping == true)
         {
             if(JumpTimeCounter > 0)
@@ -54,18 +60,20 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
+        //check if jumping
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
         }
 
-        //Movement Jumping
-        //if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
-        //{
-        //    _rigidbody.AddForce(new Vector2(0, Jumpforce), ForceMode2D.Impulse);
-        //}
-
-
+        if (isGrounded)
+        {
+            hangCounter = hangTime;
+        }
+        else
+        {
+            hangCounter -= Time.deltaTime;
+        }
     }
 
 }
