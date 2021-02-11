@@ -655,6 +655,7 @@ MonoBehaviour:
     m_Bits: 256
   JumpTime: 0.2
   hangTime: 0.1
+  jumpBufferLenght: 0.2
 --- !u!1 &2033798659
 GameObject:
   m_ObjectHideFlags: 0
