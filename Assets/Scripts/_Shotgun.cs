@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class _Shotgun : MonoBehaviour
 {
+    public GameObject Player;
+
     public float offset;
 
     private void Update()
@@ -11,5 +13,17 @@ public class _Shotgun : MonoBehaviour
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+
+        if (rotZ < -90 || rotZ > 90)
+        {
+            if(Player.transform.eulerAngles.y == 0)
+            {
+                transform.localRotation = Quaternion.Euler(180, 0, -rotZ);
+            }
+            else if (Player.transform.eulerAngles.y == 180)
+            {
+                transform.localRotation = Quaternion.Euler(180, 180, -rotZ);
+            }
+        }
     }
 }
