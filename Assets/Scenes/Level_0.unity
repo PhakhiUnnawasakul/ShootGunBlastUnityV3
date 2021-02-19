@@ -478,7 +478,7 @@ MonoBehaviour:
   offset: 0
   shotPoint: {fileID: 1882353608}
   Blast: {fileID: 5603446241927585603, guid: f7e12abe3683f47418bbf3f97fa07eb4, type: 3}
-  StartTimeBtwShots: 0.2
+  StartTimeBtwShots: 0.18
 --- !u!1 &1345088768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,10 +1002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 924094707, guid: f7e12abe3683f47418bbf3f97fa07eb4, type: 3}
-      propertyPath: blastLife
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 3412430012736771184, guid: f7e12abe3683f47418bbf3f97fa07eb4, type: 3}
       propertyPath: m_RootOrder
       value: 5
