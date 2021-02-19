@@ -8,12 +8,20 @@ public class _Shotgun : MonoBehaviour
 
     public float offset;
 
+    public Transform shotPoint;
+    public GameObject Blast;
+    private float timeBtwShots;
+    public float StartTimeBtwShots;
+
+
     private void Update()
     {
+        //Make gun follow mouse
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
+        //Make gun flip in a correct position
         if (rotZ < -90 || rotZ > 90)
         {
             if(Player.transform.eulerAngles.y == 0)
@@ -25,5 +33,22 @@ public class _Shotgun : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(180, 180, -rotZ);
             }
         }
+
+        if (timeBtwShots <= 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(Blast, shotPoint.position, transform.rotation);
+                timeBtwShots = StartTimeBtwShots;
+            }
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+        
+
+
+
     }
 }
