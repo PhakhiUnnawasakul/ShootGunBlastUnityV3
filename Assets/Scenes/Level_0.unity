@@ -478,7 +478,7 @@ MonoBehaviour:
   offset: 0
   shotPoint: {fileID: 1882353608}
   Blast: {fileID: 5603446241927585603, guid: f7e12abe3683f47418bbf3f97fa07eb4, type: 3}
-  StartTimeBtwShots: 0.18
+  StartTimeBtwShots: 0.3
 --- !u!1 &1345088768
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +744,7 @@ GameObject:
   - component: {fileID: 2023917250}
   - component: {fileID: 2023917249}
   - component: {fileID: 2023917251}
+  - component: {fileID: 2023917252}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -902,6 +903,21 @@ MonoBehaviour:
   JumpTime: 0.2
   hangTime: 0.1
   jumpBufferLenght: 0.2
+--- !u!114 &2023917252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023917244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aef8be1442c0a94d9cc7bd0099d8e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GunForcePoint: {fileID: 1882353608}
+  GunForce: 8
+  StartTimeBtwKnock: 0.3
 --- !u!1 &2033798659
 GameObject:
   m_ObjectHideFlags: 0

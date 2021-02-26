@@ -8,6 +8,9 @@ public class Player_Knockback : MonoBehaviour
     public Transform GunForcePoint;
     public float GunForce = 50f;
 
+    private float timeBtwKnock;
+    public float StartTimeBtwKnock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +21,19 @@ public class Player_Knockback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (timeBtwKnock <= 0)
         {
-            KnockBack();
+            if (Input.GetMouseButtonDown(0))
+            {
+                KnockBack();
+                timeBtwKnock = StartTimeBtwKnock;
+            }
         }
+        else
+        {
+            timeBtwKnock -= Time.deltaTime;
+        }
+
     }
 
     void KnockBack()
