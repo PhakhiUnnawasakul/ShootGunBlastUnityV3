@@ -1999,8 +1999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c891a070f15b1334984ea48975fc3477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 10
+  Range: 5
   Target: {fileID: 2023917248}
+  Gun: {fileID: 1033446443}
 --- !u!1 &1570907199
 GameObject:
   m_ObjectHideFlags: 0

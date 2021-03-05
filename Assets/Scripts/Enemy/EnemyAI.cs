@@ -12,10 +12,7 @@ public class EnemyAI : MonoBehaviour
 
     Vector2 Direction;
 
-    void Start()
-    {
-        
-    }
+    public GameObject Gun;
 
     void Update()
     {
@@ -45,6 +42,11 @@ public class EnemyAI : MonoBehaviour
                 }
             }
 
+        }
+
+        if (Detected)
+        {
+            Gun.transform.right = Direction;
         }
 
     }
