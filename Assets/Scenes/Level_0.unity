@@ -2034,9 +2034,9 @@ MonoBehaviour:
   Target: {fileID: 2023917248}
   Gun: {fileID: 1033446443}
   Bullet: {fileID: 2000399610950638697, guid: a8c488706798ab84da5ed1b49c85c995, type: 3}
-  FireRate: 5
+  FireRate: 10
   EnemyGunpoint: {fileID: 368672858}
-  BulletForce: 500
+  BulletForce: 100
 --- !u!1 &1570907199
 GameObject:
   m_ObjectHideFlags: 0

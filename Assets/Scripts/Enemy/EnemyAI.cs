@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
 
     public float BulletForce;
 
-    void Update()
+    void FixedUpdate()
     {
         //Direction of where the player is
         Vector2 targetPos = Target.position;
