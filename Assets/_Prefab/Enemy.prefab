@@ -127,9 +127,9 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 128
-  Bullet: {fileID: 0}
-  Gunpoint: {fileID: 0}
-  ShotDelay: 1
+  Bullet: {fileID: 6236092120649077354, guid: 96ac637b6b374d64b84d1e0eb22779aa, type: 3}
+  Gunpoint: {fileID: 8031400978827077541}
+  ShotDelay: 2
 --- !u!1 &1478143354397209119
 GameObject:
   m_ObjectHideFlags: 0
