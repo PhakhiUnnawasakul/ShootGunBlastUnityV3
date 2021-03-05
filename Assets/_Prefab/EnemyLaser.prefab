@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2210275085035013970}
   - component: {fileID: 1281682853170146723}
   - component: {fileID: 6120592336018074006}
+  - component: {fileID: -8127864491210376445}
   m_Layer: 0
   m_Name: EnemyLaser
   m_TagString: Untagged
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8127864491210376445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000399610950638697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ff1abb1322d334b8b1b549dfec0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

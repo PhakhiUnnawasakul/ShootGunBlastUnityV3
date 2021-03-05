@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter2D(Collision2D Col)    
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        Destroy(this.gameObject);
         
     }
 }
