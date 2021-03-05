@@ -3343,6 +3343,24 @@ Transform:
   m_Father: {fileID: 1845802538}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2023917244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3768417267946927094, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
+  m_PrefabInstance: {fileID: 3768417269698147658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023917245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023917244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dd43f6536933049b3a6645a1cef27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!4 &2023917248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
@@ -3564,6 +3582,10 @@ PrefabInstance:
       propertyPath: Gunpoint
       value: 
       objectReference: {fileID: 910677959}
+    - target: {fileID: 2083644292, guid: c1985ccba768d8f44a1779e403278e21, type: 3}
+      propertyPath: ShotDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1478143354397209117, guid: c1985ccba768d8f44a1779e403278e21, type: 3}
       propertyPath: m_RootOrder
       value: 4
