@@ -12,13 +12,11 @@ public class EnemyAI : MonoBehaviour
 
     Vector2 Direction;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Direction of where the player is
@@ -49,5 +47,12 @@ public class EnemyAI : MonoBehaviour
 
         }
 
+    }
+
+    //Draw sphere of the detection range
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, Range);
+        
     }
 }
