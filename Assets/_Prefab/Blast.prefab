@@ -96,7 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82989f6457a3d5141abd487fcfc0e833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blastLife: 0.1
+  speed: 1
+  blastLife: 0.18
+  distance: 1
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 1024
+  damage: 1
 --- !u!61 &566561080062536994
 BoxCollider2D:
   m_ObjectHideFlags: 0

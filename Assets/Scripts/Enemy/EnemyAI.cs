@@ -5,18 +5,14 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public float Range;
-
     public Transform Target;
-
     bool Detected = false;
 
     Vector2 Direction;
-
     public GameObject Gun;
-
     public GameObject Bullet;
 
-    
+    public int health;
     
     public float FireRate;
     float nextShoot = 0;
@@ -26,6 +22,12 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+
         //Direction of where the player is
         Vector2 targetPos = Target.position;
         Direction = targetPos - (Vector2)transform.position;
@@ -76,11 +78,26 @@ public class EnemyAI : MonoBehaviour
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * BulletForce);
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag.Equals("PlayerBlats"))
+        {
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        } 
+    }
+
+
     //Draw sphere of the detection range
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, Range);
         
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
     }
 
 

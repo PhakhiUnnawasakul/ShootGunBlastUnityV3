@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1478143354397209122}
   m_Layer: 10
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 5
-  Target: {fileID: 0}
+  Target: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
   Gun: {fileID: 1478143355775646057}
   Bullet: {fileID: 6236092120649077354, guid: 96ac637b6b374d64b84d1e0eb22779aa, type: 3}
+  health: 1
   FireRate: 0.5
   EnemyGunpoint: {fileID: 1478143355379309848}
   BulletForce: 50
