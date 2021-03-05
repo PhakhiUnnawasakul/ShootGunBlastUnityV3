@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
 
     public float BulletForce;
 
-    void FixedUpdate()
+    void Update()
     {
         //Direction of where the player is
         Vector2 targetPos = Target.position;
@@ -82,4 +82,6 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Range);
         
     }
+
+
 }
