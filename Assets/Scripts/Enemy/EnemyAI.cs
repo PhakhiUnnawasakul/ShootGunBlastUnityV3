@@ -14,6 +14,16 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject Gun;
 
+    public GameObject Bullet;
+
+    
+    
+    public float FireRate;
+    float nextShoot = 0;
+    public Transform EnemyGunpoint;
+
+    public float BulletForce;
+
     void Update()
     {
         //Direction of where the player is
@@ -44,11 +54,25 @@ public class EnemyAI : MonoBehaviour
 
         }
 
+        //if player is detected, do something
         if (Detected)
         {
+            //make gun turn
             Gun.transform.right = Direction;
+
+            if(Time.time > nextShoot)
+            {
+                nextShoot = Time.time + 1 / FireRate;
+                shoot();
+            }
         }
 
+    }
+
+    void shoot()
+    {
+        GameObject BulletIns = Instantiate(Bullet, EnemyGunpoint.position, Quaternion.identity);
+        BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * BulletForce);
     }
 
     //Draw sphere of the detection range
