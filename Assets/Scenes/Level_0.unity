@@ -446,7 +446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368672857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -0.05, z: 0}
+  m_LocalPosition: {x: 1.18, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1033446444}
@@ -2034,7 +2034,7 @@ MonoBehaviour:
   Target: {fileID: 2023917248}
   Gun: {fileID: 1033446443}
   Bullet: {fileID: 2000399610950638697, guid: a8c488706798ab84da5ed1b49c85c995, type: 3}
-  FireRate: 10
+  FireRate: 0.5
   EnemyGunpoint: {fileID: 368672858}
   BulletForce: 100
 --- !u!1 &1570907199

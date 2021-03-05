@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
 
     public float BulletForce;
 
-    void FixedUpdate()
+    void Update()
     {
         //Direction of where the player is
         Vector2 targetPos = Target.position;
@@ -69,9 +69,10 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+
     void shoot()
     {
-        GameObject BulletIns = Instantiate(Bullet, EnemyGunpoint.position, Quaternion.identity);
+        GameObject BulletIns = Instantiate(Bullet, EnemyGunpoint.position, transform.rotation);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * BulletForce);
     }
 
