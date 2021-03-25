@@ -16,37 +16,43 @@ public class _Shotgun : MonoBehaviour
 
     private void Update()
     {
-        //Make gun follow mouse
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+        if (!PauseMenu.isPause)
+        {
+            //Make gun follow mouse
+            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
-        //Make gun flip in a correct position
-        if (rotZ < -90 || rotZ > 90)
-        {
-            if(Player.transform.eulerAngles.y == 0)
+            //Make gun flip in a correct position
+            if (rotZ < -90 || rotZ > 90)
             {
-                transform.localRotation = Quaternion.Euler(180, 0, -rotZ);
+                if (Player.transform.eulerAngles.y == 0)
+                {
+                    transform.localRotation = Quaternion.Euler(180, 0, -rotZ);
+                }
+                else if (Player.transform.eulerAngles.y == 180)
+                {
+                    transform.localRotation = Quaternion.Euler(180, 180, -rotZ);
+                }
             }
-            else if (Player.transform.eulerAngles.y == 180)
-            {
-                transform.localRotation = Quaternion.Euler(180, 180, -rotZ);
-            }
-        }
 
-        if (timeBtwShots <= 0)
-        {
-            if (Input.GetMouseButtonDown(0))
+            if (timeBtwShots <= 0)
             {
-                Instantiate(Blast, shotPoint.position, transform.rotation);
-                timeBtwShots = StartTimeBtwShots;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Instantiate(Blast, shotPoint.position, transform.rotation);
+                    timeBtwShots = StartTimeBtwShots;
+                }
             }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
+
+
+
+
         }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
-        
 
 
 
