@@ -30,5 +30,18 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    void LoadScene()
+    {
+        if (useIntegerToLoadLevel)
+        {
+            //load scene with number
+            SceneManager.LoadScene(numLevelLoad);
+        }
+        else
+        {
+            //load scene with name
+            SceneManager.LoadScene(nameLevelLoad);
+        }
+    }
 
 }
