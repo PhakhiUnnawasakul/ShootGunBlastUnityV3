@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int numLevelLoad;
+    public string nameLevelLoad;
+
+    public bool useIntegerToLoadLevel = false;
+
     void Start()
     {
-        
+         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
