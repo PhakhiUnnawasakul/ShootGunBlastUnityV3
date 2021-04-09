@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float slowAmount = 0.5f;
+  
+    void DoSlowMotion()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Time.timeScale = slowAmount;
+        Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
 }
