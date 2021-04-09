@@ -6,7 +6,7 @@ public class Player_BulletTime : MonoBehaviour
 {
     public TimeManager timeManager;
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButton(1))
         {
