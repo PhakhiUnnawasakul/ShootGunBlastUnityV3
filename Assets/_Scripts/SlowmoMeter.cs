@@ -15,6 +15,7 @@ public class SlowmoMeter : MonoBehaviour
     public TimeManager timeManager;
 
     private WaitForSeconds regenTick = new WaitForSeconds(0.01f);
+    private Coroutine regen;
 
     private void Awake()
     {
@@ -35,12 +36,16 @@ public class SlowmoMeter : MonoBehaviour
             currentBar -= amount;
             SlowmoBar.value = currentBar;
 
-            StartCoroutine(RegenSlowmoBar());
+            if (regen != null)
+            {
+                StopCoroutine(regen);
+            }
+
+            regen = StartCoroutine(RegenSlowmoBar());
         }
         else
         {
             timeManager.StopSlowMotion();
-            Debug.Log("Run out of Slowmo");
         }
     }
 
@@ -55,5 +60,6 @@ public class SlowmoMeter : MonoBehaviour
             SlowmoBar.value = currentBar;
             yield return regenTick;
         }
+        regen = null;
     }
 }
