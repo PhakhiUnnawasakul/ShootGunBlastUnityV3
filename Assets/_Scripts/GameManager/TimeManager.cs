@@ -6,7 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public float slowAmount = 0.5f;
   
-    void DoSlowMotion()
+    public void DoSlowMotion()
     {
         Time.timeScale = slowAmount;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;

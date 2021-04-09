@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ddf13c80f34e44082757e0d1157b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowAmount: 0.5
+  slowAmount: 0.25
 --- !u!1 &535989407
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5082,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &2023917246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023917244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c4bf202eb77514d93bae9d477ff61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeManager: {fileID: 396542243}
 --- !u!4 &2023917248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
