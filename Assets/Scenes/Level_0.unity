@@ -3144,6 +3144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlowmoBar: {fileID: 986139486}
+  timeManager: {fileID: 396542243}
 --- !u!1 &1151558285
 GameObject:
   m_ObjectHideFlags: 0
