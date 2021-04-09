@@ -11,4 +11,9 @@ public class TimeManager : MonoBehaviour
         Time.timeScale = slowAmount;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
+
+    public void StopSlowMotion()
+    {
+        Time.timeScale = 1f;
+    }
 }

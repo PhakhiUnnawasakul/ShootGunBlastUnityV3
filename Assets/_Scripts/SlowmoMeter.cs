@@ -12,6 +12,8 @@ public class SlowmoMeter : MonoBehaviour
 
     public static SlowmoMeter instance;
 
+    public TimeManager timeManager;
+
     private void Awake()
     {
         instance = this;
@@ -33,6 +35,7 @@ public class SlowmoMeter : MonoBehaviour
         }
         else
         {
+            timeManager.StopSlowMotion();
             Debug.Log("Run out of Slowmo");
         }
     }
