@@ -14,6 +14,8 @@ public class SlowmoMeter : MonoBehaviour
 
     public TimeManager timeManager;
 
+    private WaitForSeconds regenTick = new WaitForSeconds(0.01f);
+
     private void Awake()
     {
         instance = this;
@@ -32,6 +34,8 @@ public class SlowmoMeter : MonoBehaviour
         {
             currentBar -= amount;
             SlowmoBar.value = currentBar;
+
+            StartCoroutine(RegenSlowmoBar());
         }
         else
         {
@@ -40,5 +44,16 @@ public class SlowmoMeter : MonoBehaviour
         }
     }
 
-    
+    private IEnumerator RegenSlowmoBar()
+    {
+        //will wait 2 seconds before continues
+        yield return new WaitForSeconds(2);
+
+        while(currentBar < maxBar)
+        {
+            currentBar += maxBar / 100;
+            SlowmoBar.value = currentBar;
+            yield return regenTick;
+        }
+    }
 }

@@ -13,5 +13,9 @@ public class Player_BulletTime : MonoBehaviour
             timeManager.DoSlowMotion();
             SlowmoMeter.instance.UseSlowMo(1);
         }
+        else
+        {
+            timeManager.StopSlowMotion();
+        }
     }
 }
