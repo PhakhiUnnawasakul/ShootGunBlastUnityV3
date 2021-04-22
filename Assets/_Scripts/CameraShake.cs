@@ -17,6 +17,8 @@ public class CameraShake : MonoBehaviour
     //does the shaking
     void StartShaking()
     {
+        float CameraShakingOffsetX = Random.value * shakeMag * 2 - shakeMag;
+        float CameraShakingOffsetY = Random.value * shakeMag * 2 - shakeMag;
 
     }
 
