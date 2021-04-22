@@ -12,6 +12,7 @@ public class CameraShake : MonoBehaviour
     {
         cameraInitialPosition = MainCamera.transform.position;
         InvokeRepeating("StartShaking", 0f, 0.0005f);
+        Invoke("StopShaking", shakeTime);
     }
 
     //does the shaking
@@ -19,7 +20,16 @@ public class CameraShake : MonoBehaviour
     {
         float CameraShakingOffsetX = Random.value * shakeMag * 2 - shakeMag;
         float CameraShakingOffsetY = Random.value * shakeMag * 2 - shakeMag;
+        Vector3 cameraInitialPosition = MainCamera.transform.position;
+        cameraInitialPosition.x += CameraShakingOffsetX;
+        cameraInitialPosition.y += CameraShakingOffsetY;
+        MainCamera.transform.position = cameraInitialPosition;
 
     }
 
+    void StopShaking()
+    {
+        CancelInvoke("StartShaking");
+        MainCamera.transform.position = cameraInitialPosition;
+    }
 }
