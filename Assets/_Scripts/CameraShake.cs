@@ -10,6 +10,13 @@ public class CameraShake : MonoBehaviour
 
     public void Shaking()
     {
+        cameraInitialPosition = MainCamera.transform.position;
+        InvokeRepeating("StartShaking", 0f, 0.0005f);
+    }
+
+    //does the shaking
+    void StartShaking()
+    {
 
     }
 
