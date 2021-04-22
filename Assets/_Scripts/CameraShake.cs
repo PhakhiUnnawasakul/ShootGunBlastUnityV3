@@ -8,6 +8,17 @@ public class CameraShake : MonoBehaviour
     public float shakeMag = 0.05f, shakeTime = 0.5f;
     public Camera MainCamera;
 
+    private void Update()
+    {
+        if (!PauseMenu.isPause)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shaking();
+            }
+        }
+    }
+
     public void Shaking()
     {
         cameraInitialPosition = MainCamera.transform.position;

@@ -42,6 +42,7 @@ public class _Shotgun : MonoBehaviour
                 {
                     Instantiate(Blast, shotPoint.position, transform.rotation);
                     timeBtwShots = StartTimeBtwShots;
+
                 }
             }
             else
