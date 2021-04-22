@@ -1916,8 +1916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e06296702f616143a9aa7da449401df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeMag: 0.05
-  shakeTime: 0.5
+  shakeMag: 0.005
+  shakeTime: 0.05
   MainCamera: {fileID: 728965216}
 --- !u!4 &1051762822
 Transform:
