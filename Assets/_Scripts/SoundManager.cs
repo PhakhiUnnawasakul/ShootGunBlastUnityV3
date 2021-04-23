@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
+
     public static void playSound()
     {
         audioSrc.PlayOneShot(ShootSound);
