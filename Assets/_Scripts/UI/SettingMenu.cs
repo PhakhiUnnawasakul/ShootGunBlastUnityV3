@@ -85,9 +85,36 @@ public class SettingMenu : MonoBehaviour
         resolutionDropDown.RefreshShownValue();
     }
 
-
-    void Update()
+    public void SetResolution(int resolutionIndex)
     {
-        
+        Resolution resolution = resolutions[resolutionIndex];
+
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void ChangeVol(float volume)
+    {
+        PlayerPrefs.SetFloat("MVolume", volume);
+        volMixer.SetFloat("SfxVol", PlayerPrefs.GetFloat("MVolume"));
+    }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+
+        if(isFullScreen == false)
+        {
+            PlayerPrefs.SetInt("togglestate", 0);
+        }
+        else
+        {
+            isFullScreen = true;
+            PlayerPrefs.SetInt("togglestate", 1);
+        }
     }
 }
