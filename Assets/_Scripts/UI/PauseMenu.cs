@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour
     public void Settings()
     {
         pauseMenu.SetActive(false);
-        settingMenu.SetActive(false);
+        settingMenu.SetActive(true);
     }
 
     public void QuitGame()
