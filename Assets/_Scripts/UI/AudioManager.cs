@@ -1,29 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     private static readonly string FirstPlay = "FirstPlay";
-    private int firstplayInt;
+    private static readonly string BackgroundPref = "BackgroundPref";
+    private static readonly string SoundEffectPref = "SoundEffectPref";
+    private int firstPlayInt;
     public Slider backgroundSlider, soundEffectSlider;
     private float backgroundFloat, soundEffectFloat;
 
 
     void Start()
     {
-        firstplayInt = PlayerPrefs.GetInt(FirstPlay);
+        firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
 
-        if(firstplayInt == 0)
+        if(firstPlayInt == 0)
         {
-
+            backgroundFloat = .75f;
+            soundEffectFloat = .75f;
+            backgroundSlider.value = backgroundFloat;
+            soundEffectSlider.value = soundEffectFloat;
+            PlayerPrefs.SetFloat(BackgroundPref, backgroundFloat);
+            PlayerPrefs.SetFloat(SoundEffectPref, soundEffectFloat);
+            PlayerPrefs.SetInt(FirstPlay, -1);
         }
         else
         {
-
+            backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
+            backgroundSlider.value = backgroundFloat;
+            soundEffectFloat = PlayerPrefs.GetFloat(SoundEffectPref);
+            soundEffectSlider.value = soundEffectFloat;
         }
         
     }
+
+    public void SaveSoundSettings()
+    {
+        PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
+        PlayerPrefs.SetFloat(SoundEffectPref, soundEffectSlider.value);
+    }
+
+
+    
+
 
 }

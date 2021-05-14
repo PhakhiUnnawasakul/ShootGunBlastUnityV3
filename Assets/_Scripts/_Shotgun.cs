@@ -43,7 +43,7 @@ public class _Shotgun : MonoBehaviour
                     Instantiate(Blast, shotPoint.position, transform.rotation);
                     timeBtwShots = StartTimeBtwShots;
 
-                    SoundManager.playSound();
+                    //SoundManager.playSound();
                 }
             }
             else
