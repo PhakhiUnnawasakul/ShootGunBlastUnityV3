@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public Slider backgroundSlider, soundEffectSlider;
     private float backgroundFloat, soundEffectFloat;
 
+    public AudioSource backgroundAudio;
+
 
     void Start()
     {
@@ -41,8 +43,14 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat(SoundEffectPref, soundEffectSlider.value);
     }
 
+    void OnApplicationFocus(bool inFocus)
+    {
+        if (!inFocus)
+        {
+            SaveSoundSettings();
+        }
+    }
 
-    
 
 
 }
