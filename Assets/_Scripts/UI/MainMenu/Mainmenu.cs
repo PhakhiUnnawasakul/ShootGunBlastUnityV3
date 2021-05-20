@@ -10,6 +10,11 @@ public class Mainmenu : MonoBehaviour
         SceneManager.LoadScene("Level_0");
     }
 
+    public void CreditsScreen()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void GameQuit()
     {
         Application.Quit();
