@@ -13,6 +13,13 @@ public class _Shotgun : MonoBehaviour
     private float timeBtwShots;
     public float StartTimeBtwShots;
 
+    public AudioSource m_shootingSound;
+
+    void Start()
+    {
+        m_shootingSound = GetComponent<AudioSource>();
+        
+    }
 
     private void Update()
     {
@@ -43,7 +50,7 @@ public class _Shotgun : MonoBehaviour
                     Instantiate(Blast, shotPoint.position, transform.rotation);
                     timeBtwShots = StartTimeBtwShots;
 
-                    SoundManager.playSound();
+                    m_shootingSound.Play();
                 }
             }
             else

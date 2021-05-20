@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     private float backgroundFloat, soundEffectFloat;
 
     public AudioSource backgroundAudio;
+    public AudioSource[] soundEffectsAudio; 
 
 
     void Start()
@@ -51,6 +52,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void UpdateSound()
+    {
+        backgroundAudio.volume = backgroundSlider.value;
 
+        for(int i = 0; i < soundEffectsAudio.Length; i++)
+        {
+            soundEffectsAudio[i].volume = soundEffectSlider.value;
+        }
+    }
 
 }
