@@ -4334,6 +4334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3811997411379441665, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
 --- !u!1001 &7829559707990760854
@@ -4355,6 +4359,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1436637539}
+    - target: {fileID: 801517297, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSound
+      objectReference: {fileID: 0}
     - target: {fileID: 1652430256, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4387,6 +4395,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1436637539}
+    - target: {fileID: 1883753670, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSound
+      objectReference: {fileID: 0}
     - target: {fileID: 2127271590, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
