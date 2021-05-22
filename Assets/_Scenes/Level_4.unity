@@ -1397,7 +1397,7 @@ Transform:
   m_GameObject: {fileID: 575968147}
   m_LocalRotation: {x: -0.40821788, y: 0.23456968, z: -0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 29.6, y: -13.1, z: -11.2}
-  m_LocalScale: {x: 108.351, y: 8.345995, z: 1}
+  m_LocalScale: {x: 140.8563, y: 8.345995, z: 1}
   m_Children: []
   m_Father: {fileID: 1694078179}
   m_RootOrder: 0
@@ -3702,6 +3702,7 @@ MonoBehaviour:
   numLevelLoad: 7
   nameLevelLoad: Level_1
   useIntegerToLoadLevel: 1
+  fading: {fileID: 7829559707990760857}
 --- !u!61 &1703462417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4845,7 +4846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.27
+      value: 7.9
       objectReference: {fileID: 0}
     - target: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5143,5 +5144,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7829559707990760857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1401987260, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
+  m_PrefabInstance: {fileID: 7829559707990760854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1d6a4fa198b8744a70983ebaf07f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

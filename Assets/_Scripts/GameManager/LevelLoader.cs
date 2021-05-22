@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -10,15 +11,8 @@ public class LevelLoader : MonoBehaviour
 
     public bool useIntegerToLoadLevel = false;
 
-    void Start()
-    {
-         
-    }
-
-    void Update()
-    {
-        
-    }
+    public FadeIn fading;
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,7 +20,18 @@ public class LevelLoader : MonoBehaviour
 
         if(collisionGameObject.name == "Player")
         {
-            LoadScene();
+            fading.fadeOut();
+
+            StartCoroutine(ExecuteAfterTime(1));
+
+            IEnumerator ExecuteAfterTime(float time)
+            {
+                yield return new WaitForSeconds(time);
+
+                // Code to execute after the delay
+                LoadScene();
+            }
+            
         }
     }
 

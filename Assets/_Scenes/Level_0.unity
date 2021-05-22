@@ -586,7 +586,7 @@ TextMesh:
     to escape the facility.
 
     Goodluck! 
-    -Past tester'
+    -Subject 56'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3551,6 +3551,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1401987260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1401987260, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
+  m_PrefabInstance: {fileID: 7829559707990760854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1d6a4fa198b8744a70983ebaf07f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1436637538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4168,7 @@ MonoBehaviour:
   numLevelLoad: 2
   nameLevelLoad: Level_1
   useIntegerToLoadLevel: 1
+  fading: {fileID: 1401987260}
 --- !u!61 &1703462417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5651,11 +5663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.06
+      value: -9.7
       objectReference: {fileID: 0}
     - target: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3768417267946926986, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5693,10 +5705,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3811997411379441665, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfcfaee68f209e240ba4c9ef0fe397f2, type: 3}
 --- !u!1001 &7829559707990760854
@@ -5706,46 +5714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 108305744, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108305744, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 801517297, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1436637539}
-    - target: {fileID: 801517297, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1652430256, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1652430256, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1652430256, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675166571, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675166571, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675166571, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1855555190, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5754,18 +5726,6 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1436637539}
-    - target: {fileID: 1883753670, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 2127271590, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2127271590, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7829559707021748683, guid: c649507cf2ea03040ac91fd2bc830c44, type: 3}
       propertyPath: m_Name
       value: Canvas
